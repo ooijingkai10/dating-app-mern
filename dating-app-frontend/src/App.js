@@ -1,10 +1,12 @@
-
 import './App.css';
+import Header from './components/Header';
+import DatingCards from './components/DatingCards';
 
 function App() {
   return (
     <div className="App">
-     <h1>Dating App Mern</h1>
+      <Header />
+      <DatingCards />
     </div>
   );
 }
