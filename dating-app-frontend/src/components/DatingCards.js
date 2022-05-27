@@ -22,15 +22,17 @@ export default function DatingCards() {
 
     const outOfFrame = (name) => {
         console.log(name + " left the screen!!")
+        console.log(people)
     }
+
 
     return (
         <div className="datingCards">
             <div className="datingCards_container">
-                {people.map((person) => (
+                {people.map((person, index) => (
                     <DatingCard
                         className="swipe"
-                        key={person.name}
+                        key={index}
                         preventSwipe={['up','down']}
                         onSwipe={(dir) => swiped(dir, person.name)}
                         onCardLeftScreen={() => outOfFrame(person.name)} >
